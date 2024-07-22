@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dk.ge</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    
+<section class="header">
+    <div class="container">
+        <div class="header-inner">
+            <div class="nav-bar">
+                <ul>
+                    <li><a href="./index.html">მთავარი</a></li>
+                    <li><a href="#">ვაკანსიის განთავსება</a></li>
+                    <li><a href="#">აკადემია</a></li>
+                </ul>
+            </div>
+            <button><a onclick="logInFun()" href="#">შესვლა</a></button>
+            <div class="header__burger">
+                <span class="header__burger-item"></span>
+                <span class="header__burger-item"></span>
+                <span class="header__burger-item"></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="log-in" >
+    <div class="container">
+        <div id="log-in" class="log-in-inner">
+            <i onclick="closeLogIn()" class="bi bi-x-lg"></i>
+            <div class="left-side">
+                <img src="/imgs/log-in.png" alt="">
+            </div>
+            <div class="right-side">
+                <div class="inner">
+                    <h1>ავტორიზაცია</h1>
+                    <div class="email">
+                        <p>ელ.ფოსტა</p>
+                        <input type="email" placeholder="ელ.ფოსტა" id="">
+                    </div>
+                    <div class="password">
+                        <p>პაროლი</p>
+                        <input type="password" placeholder="პაროლი">
+                    </div>
+                    <a href="#">დაგავიწყდა პაროლი?</a>
+                    <h2>არ გაქვთ ანგარიში? <a href="#">რეგისტრაცია</a></h2>
+                    <button>შესვლა</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="main">
+        <div class="main-video">
+            <video autoplay loop muted plays-inline>
+                <source src="/imgs/backgroundVideo.mp4" />
+            </video>
+            <h1>ვაკანსიები, რომლებიც შეიძლება საინტერესო იყოს თქვენთვის ან თქვენი მეგობრებისთვის</h1>
+
+            <div class="main-cont">
+                <div class="item">
+                    <p>რას ეძებთ?</p>
+                    <input id="position" type="text" placeholder="პოზიცია, კომპანია">
+                </div>
+
+                <div class="item">
+                    <p>სად?</p>
+                    <input id="location" type="text" placeholder="ადგილმდებარეობა" >
+                </div>
+
+                <div class="item price">
+                    <p>შემოსავალი?</p>
+                    <button onclick="priceModule()" id="btn-main" class="btn-main">შემოსავალი</button> 
+               </div>
+
+                <div class="button">
+                    <button onclick="search()">ძებნა</button>
+                </div>
+            </div>
+            <div id="price-module" class="price-module">
+                <div class="first">
+                    <p>მინ.შემოსავალი</p>
+                    <input type="text" placeholder="თანხა -დან" id="min-price">
+                    <button onclick="save()">შენახვა</button>
+                </div>
+
+                <div class="two">
+                    <p>მაქს. შემოსავალი</p>
+                    <input type="text" placeholder="თანხა -მდე" id="max-price">
+                    <button onclick="clear()">გასუფთავება</button>
+                </div>
+            </div>
+        </div>
+</section>
+
+
+
+<section id="main-one" class="main-one">
+    <div class="container">
+        <div id="main-one-inner" class="main-one-inner">
+            <h1 id="searchResult">ძიების შედეგი</h1>
+            <div id="main-one-items" class="items">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="main-two" id="main-two" >
+    <div class="container">
+        <div class="main-two-inner">
+            <h1>კატეგორიები   <a href="./allcategory.html">(ყველას ნახვა)</a></h1>
+            <div id="item" class="item">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="main-three" id="main-three">
+    <div class="container">
+        <div class="main-three-inner">
+            <h1>VIP ვაკანსიები</h1>
+
+            <div id="items" class="items">
+
+
+                
+
+               
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="left-side">
+                <div class="img">
+                    <img src="/imgs/footer-logo.png" alt="">
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="items">
+                    <div class="item">
+                        <h1>სწრაფი ლინკები</h1>
+                        <p>VIP ვაკანსიები</p>
+                        <p>დისტანციური</p>
+                        <p>ჰიბრიდული</p>
+                        <p>გამოცდილების გარეშე</p>
+                        <p>CV გაგზავნა არ არის საჭირო</p>
+                    </div>
+                    <div class="item">
+                        <h1>ვაკანსიები</h1>
+                        <p>ვაკანსიის განთავსება</p>
+                        <p>ყველა ვაკანსია</p>
+                    </div>
+                    <div class="item">
+                        <h1>KENCHADZE.GROUP</h1>
+                        <p>ვაკანსიები</p>
+                        <p>აკადემია</p>
+                        <p>უძრავი ქონება</p>
+                        <p>ინვესტიციები</p>
+                        <p>სამოტივაციო ბლოგი</p>
+                    </div>
+                    <div class="item">
+                        <h1>კონტაქტი</h1>
+                        <p>598 335 837</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+    <script src="/scripts/main.js"></script>
+</body>
+</html>
